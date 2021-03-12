@@ -14,25 +14,25 @@ import static io.qameta.allure.Allure.step;
 
 public class StudentRegistrationFormPositive {
 
-    Faker fake = new Faker();
-
-    String firstName = fake.name().firstName(),
-            lastName = fake.name().lastName(),
-            email = fake.internet().emailAddress(),
-            gender = "Male",
-            month = "October",
-            year = "1989",
-            mobileNumber = fake.phoneNumber().subscriberNumber(10),
-            subjects = "English",
-            address = fake.address().fullAddress(),
-            state = "Rajasthan",
-            city = "Jaiselmer",
-            sports = "Sports",
-            reading = "Reading";
 
     @Test
     @Tag("positive")
     void fieldTheFormWFakeTest() {
+        Faker fake = new Faker();
+
+        String firstName = fake.name().firstName(),
+                lastName = fake.name().lastName(),
+                email = fake.internet().emailAddress(),
+                gender = "Male",
+                month = "October",
+                year = "1989",
+                mobileNumber = fake.phoneNumber().subscriberNumber(10),
+                subjects = "English",
+                address = fake.address().fullAddress(),
+                state = "Rajasthan",
+                city = "Jaiselmer",
+                sports = "Sports",
+                reading = "Reading";
 
         step("Field the form", () -> {
             open("https://demoqa.com/automation-practice-form");
