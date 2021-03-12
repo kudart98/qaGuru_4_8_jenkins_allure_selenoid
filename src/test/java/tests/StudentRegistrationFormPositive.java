@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
 
-public class StudentRegistrationFormPositive {
+public class StudentRegistrationFormPositive extends TestBase {
 
 
     @Test
